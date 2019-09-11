@@ -100,11 +100,6 @@ def my_binary_crossentropy(y_true, y_pred,k=4):
  
     return(losses)
 
-def fl_binary_crossentropy(y_true, y_pred,at,yt):
-    bcy = K.binary_crossentropy(y_true,y_pred)
-    k = (y_true*at*((1-y_pred)**yt)+(1-y_true)(1-at)*(y_pred**yt))
-    floss = k*bcy
-    return floss
 
 
 
